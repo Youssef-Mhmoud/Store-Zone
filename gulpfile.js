@@ -9,7 +9,7 @@ const gulp = require("gulp"),
 // Html
 function html() {
   return gulp
-    .src("src/*.pug")
+    .src("src/html/*.pug")
     .pipe(pug({ pretty: true }))
     .pipe(gulp.dest("./dist"))
     .pipe(livereload());
