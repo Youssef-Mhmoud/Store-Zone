@@ -2,14 +2,12 @@
 # eCommerce Website
 
 ## Technology:
-* Html-Css-Javascript
 
-## Task Runners : 
+* Html-Css-Javascript
+ 
 * Gulp.js
 
-## Template Engine :
 * Pug.js
 
-## Pre-Processor :
 * Sass
 
