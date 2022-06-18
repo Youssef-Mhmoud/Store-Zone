@@ -1,15 +1,15 @@
 # Store-Zone
-#eCommerce Website
+# eCommerce Website
 
-##Technology:
+## Technology:
 * Html-Css-Javascript
 
-##Task Runners : 
-*Gulp.js
+## Task Runners : 
+* Gulp.js
 
-##Template Engine :
-*Pug.js
+## Template Engine :
+* Pug.js
 
-##Pre-Processor :
-*Sass
+## Pre-Processor :
+* Sass
 
