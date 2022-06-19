@@ -1,10 +1,12 @@
 const gulp = require("gulp"),
   livereload = require("gulp-livereload"),
   sass = require("gulp-sass")(require("sass")),
+  sourcemaps = require("gulp-sourcemaps"),
+  // { parallel } = require("gulp"),
   pug = require("gulp-pug"),
-  { parallel } = require("gulp"),
   uglify = require("gulp-uglify"),
-  concat = require('gulp-concat')
+  concat = require("gulp-concat"),
+  autoprefixer = require("gulp-autoprefixer");
 
 // Html
 function html() {
@@ -18,8 +20,11 @@ function html() {
 // CSS
 function css() {
   return gulp
-    .src("src/css/**/*.scss")
+    .src(["src/css/**/*.scss"])
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(autoprefixer())
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./dist/css"))
     .pipe(livereload());
 }
@@ -27,14 +32,18 @@ function css() {
 // js
 function js() {
   return gulp
-  .src("src/js/**/*.js") 
-  .pipe(concat('all.js'))
-  .pipe(uglify())
-  .pipe(gulp.dest("./dist/js"));
+    .src("src/js/*.js")
+    .pipe(concat("all.js"))
+    .pipe(uglify())
+    .pipe(gulp.dest("./dist/js"))
+    .pipe(livereload());
 }
 
 exports.default = () => {
   require("./server.js");
   livereload.listen();
-  gulp.watch(["src/**/*.*"], parallel(html, css, js));
+  // gulp.watch(["src/**/*.*"], parallel(html, css, js));
+  gulp.watch(["src/html/**/*.pug"], html);
+  gulp.watch(["src/css/**/*.scss"], css);
+  gulp.watch(["src/js/**/*.js"], js);
 };
