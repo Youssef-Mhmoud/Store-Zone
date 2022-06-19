@@ -1,7 +1,7 @@
 # Store-Zone
-# eCommerce Website
+# E-Commerce Website
 
-## Technologies:
+## Tools:
 
 * Html-Css-Javascript
 
