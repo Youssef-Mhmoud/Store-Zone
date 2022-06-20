@@ -1,1 +1,0 @@
-let toggelIcon=document.querySelector(".toggle-icon"),links=document.querySelector(".hidden-links"),body=document.body;console.log(toggelIcon),toggelIcon.addEventListener("click",e=>{links.style.left="0"});
