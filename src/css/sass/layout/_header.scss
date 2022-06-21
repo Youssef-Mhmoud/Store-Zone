@@ -10,7 +10,16 @@ header {
     .brand {
       font-size: 35px;
       font-weight: bold;
-      color: $alt-white-color;
+      // color: $alt-white-color;
+      &:hover a{
+        color: white;
+      }
+      span:first-child {
+        color: $red-color;
+      }
+      span:last-child {
+        color: $alt-green-color;
+      }
     }
     .nav-items {
       form {
