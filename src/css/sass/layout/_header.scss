@@ -1,0 +1,46 @@
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $black-color;
+  z-index: 9;
+  nav {
+    padding: 10px;
+    .brand {
+      font-size: 35px;
+      font-weight: bold;
+      color: $alt-white-color;
+    }
+    .nav-items {
+      form {
+        width: 500px;
+        display: flex;
+        .search-input {
+          width: 80% !important;
+          border-radius: 6px 0 0 6px;
+          outline: none;
+          text-transform: capitalize;
+          caret-color: $black-color;
+          color: $black-color;
+          &::placeholder {
+            color: $alt-black-color;
+          }
+          &:focus {
+            box-shadow: none;
+            border-color: white;
+            outline: none;
+          }
+        }
+        .btn {
+          background-color: $alt-green-color;
+          border-radius: 0 6px 6px 0;
+          color: $black-color;
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
