@@ -36,9 +36,23 @@ header {
           background-color: $alt-green-color;
           border-radius: 0 6px 6px 0;
           color: $black-color;
+          transition: .3s;
           &:focus {
             box-shadow: none;
           }
+          &:hover {
+            background-color: $green-color;
+          }
+        }
+      }
+      a {
+        margin-left: 20px;
+        transition: .3s;
+        &:hover {
+          color: $alt-green-color;
+        }
+        svg {
+          font-size: 25px;
         }
       }
     }

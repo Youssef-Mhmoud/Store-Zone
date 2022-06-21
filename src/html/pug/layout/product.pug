@@ -1,0 +1,18 @@
+section.product
+  .container
+    h2.product-cat Best Seller
+    .product-container 
+      span.pre <i class="fa-solid fa-chevron-left"></i>
+      spna.next <i class="fa-solid fa-chevron-right"></i>
+      -for (let i = 0; i < 5; i++) 
+        .product-card 
+          .product-img
+            span.discount 50% OFF
+            img(src="/src/img/1.jpg" class="img-fluid" alt="")
+            button.btn.card-btn Add To wishlist
+          .product-info.w-100 
+            h2 Brand 
+            p Some Details About Brand
+            span.price $20
+            spna.actual-price $40
+

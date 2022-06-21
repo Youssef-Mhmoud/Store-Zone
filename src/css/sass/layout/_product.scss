@@ -1,0 +1,101 @@
+.product {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+  h2.product-cat {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  .product-container {
+    // padding: 0 10vw;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .pre, .next {
+      font-size: 35px;
+      width: 50px;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(90deg, rgba(255,255,255, 0) 0%, rgb(255, 255, 255) 100%);
+      cursor: pointer;
+      z-index: 8;
+    }
+    .pre {
+      left: 60px;
+    }
+    .next {
+      right: 110px;
+    }
+    .product-card {
+      flex: 0 0 auto;
+      width: 250px;
+      height: 450px;
+      margin-right: 50px;
+      .product-img {
+        position: relative;
+        width: 100%;
+        height: 310px;
+        overflow: hidden;
+        &:hover .card-btn {
+          bottom: 5%;
+        }
+        .discount {
+          position: absolute;
+          right: 0;
+          margin: 10px;
+          padding: 5px;
+          border-radius: 10px;
+          background-color: $black-color;
+          color: $alt-white-color;
+        }
+        .card-btn {
+          background-color: $red-color;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -15%;
+          width: 90%;
+          color: $white-color;
+          transition: .5s;
+          &:hover {
+            background-color: $alt-red-color;
+          }
+          &:focus {
+            box-shadow: none;
+          }
+        }
+      }
+      .product-info {
+        height: 100px;
+        padding-top: 10px;
+        h2 {
+          text-transform: uppercase;
+        }
+        p {
+          height: 20px;
+          line-height: 20px;
+          overflow: hidden;
+          opacity: .5;
+          margin: 5px 0;
+        }
+        .price {
+          font-size: 20px;
+          font-weight: bold;
+        }
+        .actual-price {
+          margin-left: 20px;
+          opacity: 0.5;
+          text-decoration: line-through;
+        }
+      }
+    }
+  }
+}
