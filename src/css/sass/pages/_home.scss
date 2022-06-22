@@ -27,25 +27,25 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgb(255, 255, 255) 100%
-      );
+      // background: linear-gradient(
+      //   90deg,
+      //   rgba(255, 255, 255, 0) 0%,
+      //   rgb(255, 255, 255) 100%
+      // );
       cursor: pointer;
       z-index: 8;
     }
     .pre {
-      left: 60px;
+      left: 110px;
     }
     .next {
-      right: 110px;
+      right: 80px;
     }
     .product-card {
       flex: 0 0 auto;
       width: 250px;
       height: 450px;
-      margin-right: 35px;
+      margin-left: 60px;
       .product-img {
         position: relative;
         width: 100%;
@@ -110,7 +110,7 @@
 // Start Collection
 .main-collection {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(800px, 1fr));
+  grid-template-columns: repeat(2,1fr);
   gap: 20px;
   a {
     img {
