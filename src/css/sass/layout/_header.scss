@@ -5,8 +5,10 @@ header {
   width: 100%;
   background-color: $black-color;
   z-index: 9;
+  // Navbar
   nav {
     padding: 10px;
+    // Logo
     .brand {
       font-size: 35px;
       font-weight: bold;
@@ -22,6 +24,7 @@ header {
       }
     }
     .nav-items {
+      // Form
       form {
         width: 500px;
         display: flex;
@@ -66,4 +69,5 @@ header {
       }
     }
   }
-}
+}    
+  

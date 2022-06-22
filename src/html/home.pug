@@ -5,6 +5,43 @@ html(lang="en")
     title Home
     include pug/layout/styles
   body 
+    //- Header
     include pug/layout/header
-    include pug/layout/product
+    //- Start Product Card
+    section.product
+      .container
+        h2.product-cat Best Seller
+        .product-container
+          span.pre <i class="fa-solid fa-chevron-left"></i>
+          spna.next <i class="fa-solid fa-chevron-right"></i>
+          //- For Loop To iteration Elements
+          -for (let i = 0; i < 10; i++) 
+            .product-card 
+              .product-img
+                span.discount 50% OFF
+                img(src="/src/img/1.jpg" class="img-fluid" alt="")
+                button.btn.card-btn Add To wishlist
+              .product-info.w-100 
+                h2 Brand 
+                p Some Details About Brand
+                span.price $20
+                spna.actual-price $40
+    //- End Product
+    //- Start Collection
+    seciton.main-collection.w-100
+      a(href="#" class="collection position-relative")
+        img(src="/src/img/2.jpg", alt="" class="img-fluid")
+        p.title-collection Youth <br> Shoes 
+      a(href="#" class="collection position-relative")
+        img(src="/src/img/4.jpg", alt="" class="img-fluid")
+        p.title-collection Child <br> Shoes 
+      a(href="#" class="collection position-relative")
+        img(src="/src/img/3.jpg", alt="" class="img-fluid")
+        p.title-collection Classic <br> Models 
+      a(href="#" class="collection position-relative")
+        img(src="/src/img/5.jpg", alt="" class="img-fluid")
+        p.title-collection Modern <br> Models 
+    //- End Collection
+    //- Footer
+    include pug/layout/footer
     include pug/layout/scripts   

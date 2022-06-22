@@ -1,0 +1,1 @@
+let productContainers=[document.querySelector(".product-container")],nextBtn=[document.querySelector(".next")],preBtn=[document.querySelector(".pre")];productContainers.forEach((t,e)=>{let n=t.getBoundingClientRect().width;nextBtn[e].addEventListener("click",e=>{t.scrollLeft+=n}),preBtn[e].addEventListener("click",e=>{t.scrollLeft-=n})});

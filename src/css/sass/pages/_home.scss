@@ -1,3 +1,4 @@
+// Start Product Slider
 .product {
   position: relative;
   overflow: hidden;
@@ -16,7 +17,8 @@
     &::-webkit-scrollbar {
       display: none;
     }
-    .pre, .next {
+    .pre,
+    .next {
       font-size: 35px;
       width: 50px;
       position: absolute;
@@ -25,7 +27,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: linear-gradient(90deg, rgba(255,255,255, 0) 0%, rgb(255, 255, 255) 100%);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgb(255, 255, 255) 100%
+      );
       cursor: pointer;
       z-index: 8;
     }
@@ -39,7 +45,7 @@
       flex: 0 0 auto;
       width: 250px;
       height: 450px;
-      margin-right: 50px;
+      margin-right: 35px;
       .product-img {
         position: relative;
         width: 100%;
@@ -65,7 +71,7 @@
           bottom: -15%;
           width: 90%;
           color: $white-color;
-          transition: .5s;
+          transition: 0.5s;
           &:hover {
             background-color: $alt-red-color;
           }
@@ -84,7 +90,7 @@
           height: 20px;
           line-height: 20px;
           overflow: hidden;
-          opacity: .5;
+          opacity: 0.5;
           margin: 5px 0;
         }
         .price {
@@ -100,3 +106,36 @@
     }
   }
 }
+// End Product Slider
+// Start Collection
+.main-collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(800px, 1fr));
+  gap: 20px;
+  a {
+    img {
+      object-fit: cover;
+      height: 100% !important;
+    }
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 50px;
+      text-align: center;
+      color: $alt-white-color;
+      background: rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 32px 0 rgba(17, 17, 17, 0.2);
+      backdrop-filter: blur(1.5px);
+      // border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      width: 100%;
+      font-weight: 500;
+    }
+    &:hover {
+      color: white;
+    }
+  }
+}
+// End Collection

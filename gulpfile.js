@@ -22,7 +22,7 @@ function css() {
   return gulp
     .src(["src/css/**/*.scss"])
     .pipe(sourcemaps.init())
-    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(sass.sync({ outputStyle: "compressed" }).on("error", sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./dist/css"))
