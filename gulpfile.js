@@ -1,5 +1,4 @@
 const gulp = require("gulp"),
-  livereload = require("gulp-livereload"),
   sass = require("gulp-sass")(require("sass")),
   sourcemaps = require("gulp-sourcemaps"),
   // { parallel } = require("gulp"),
@@ -12,9 +11,8 @@ const gulp = require("gulp"),
 function html() {
   return gulp
     .src("src/html/*.pug")
-    .pipe(pug({ pretty: true }))
+    .pipe(pug())
     .pipe(gulp.dest("./dist"))
-    .pipe(livereload());
 }
 
 // CSS
@@ -26,7 +24,6 @@ function css() {
     .pipe(autoprefixer())
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest("./dist/css"))
-    .pipe(livereload());
 }
 
 // js
@@ -36,12 +33,9 @@ function js() {
     .pipe(concat("all.js"))
     .pipe(uglify())
     .pipe(gulp.dest("./dist/js"))
-    .pipe(livereload());
 }
 
 exports.default = () => {
-  require("./server.js");
-  livereload.listen();
   // gulp.watch(["src/**/*.*"], parallel(html, css, js));
   gulp.watch(["src/html/**/*.pug"], html);
   gulp.watch(["src/css/**/*.scss"], css);
