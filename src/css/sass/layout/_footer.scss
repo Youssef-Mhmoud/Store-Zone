@@ -1,6 +1,6 @@
 footer {
   width: 100%;
-  padding: 40px 10vw;
+  padding: 40px 0;
   padding-bottom: 80px;
   background-color: $black-color; 
   .footer-content {
@@ -14,5 +14,52 @@ footer {
         color: $alt-green-color;
       }
     }
+    .social-cont {
+      a {
+        margin: auto;
+        margin-top: 30px;
+        transition: .3s;
+        &:nth-child(1) {
+          color: #1877F2;
+        }
+        &:nth-child(2) {
+          color: #1DA1F2;
+        }
+        &:nth-child(3) {
+          color: #0A66C2;
+        }
+        &:nth-child(4) {
+          color: #25D366;
+        }
+      }
+    }
+    .category-container {
+      width: 45%;
+      .title-cat {
+        font-size: 20px;
+        color: white;
+        margin-bottom: 20px;
+      }
+      li {
+        padding-top: 10px;
+        a {
+          opacity: .5;
+          transition: .3s;
+          &:hover {
+            opacity: 1;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .footer-title {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  .info {
+    color: white;
+  
   }
 }
