@@ -26,7 +26,7 @@ html(lang="en")
                 p Some Details About Brand
                 span.price $20
                 spna.actual-price $40
-    //- End Product
+    //- End Product Card
     //- Start Collection
     seciton.main-collection.w-100
       a(href="#" class="collection position-relative")
@@ -42,6 +42,26 @@ html(lang="en")
         img(src="/src/img/5.jpg", alt="" class="img-fluid")
         p.title-collection Modern <br> Models 
     //- End Collection
+    //- Start Brands
+    section.product.pt-5.mt-5 
+      .container
+        h2.product-cat T-Shirts
+        .product-container
+          span.pre <i class="fa-solid fa-chevron-left"></i>
+          spna.next <i class="fa-solid fa-chevron-right"></i>
+          //- For Loop To iteration Elements
+          -for (let i = 0; i < 10; i++)
+            .product-card
+              .product-img
+                span.discount 50% OFF
+                img(src="/src/img/6.jpg" class="img-fluid" alt="")
+                button.btn.card-btn Add To wishlist
+              .product-info.w-100 
+                h2 Brand 
+                p Some Details About Brand
+                span.price $20
+                spna.actual-price $40
+    //- End Brands
     //- Footer
     include pug/layout/footer
     include pug/layout/scripts   
