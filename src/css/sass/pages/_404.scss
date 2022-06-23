@@ -1,0 +1,18 @@
+.error-page {
+  background-color: $alt-white-color;
+}
+.img-404 {
+  display: block;
+  margin: auto;
+  width: 700px;
+}
+.four-0-four {
+  text-align: center;
+  color: $alt-black-color;
+  font-weight: 500;
+  font-size: 18px;
+  a {
+    color: $blue-color;
+    text-decoration: underline;
+  }
+}
