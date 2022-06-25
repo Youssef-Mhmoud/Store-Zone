@@ -4,6 +4,8 @@
 @import "./sass/layout/global";
 // Header 
 @import './sass/layout/header'; 
+// Landing
+@import './sass/layout/landing';
 // Home Page
 @import './sass/pages/home';
 // Product Page
@@ -12,5 +14,9 @@
 @import './sass/pages/search';
 // 404 Error Page
 @import './sass/pages/404';
+// Form
+@import './sass/components/form';
+// Sign Up Page
+@import './sass/pages/singup';
 // Footer
 @import './sass/layout/footer';
