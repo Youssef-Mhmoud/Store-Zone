@@ -1,0 +1,114 @@
+.login-page {
+  min-height: 100vh;
+  background-color: $alt-green-color;
+  transition: .5s;
+  &.active .signupForm input[type="submit"] {
+    background-color: $red-color !important;
+  }
+  &.active {
+    background-color: $red-color;
+  }
+  .cont-login {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    margin: 20px;
+    // background-color: red;
+    .greenbg {
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      height: 420px;
+      background-color: rgba(white, .2);
+      box-shadow: 0 5px 45px rgba( black, .15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .box {
+        position: relative;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h2 {
+          color: $white-color;
+          font-size: 25px;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+        button {
+          color: $black-color;
+          background-color: white;
+          font-weight: 500;
+        }
+      }
+    }
+    .form-bx {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background-color: white;
+      z-index: 100;
+      box-shadow: 0 5px 45px rgba( black, .25);
+      transition: 0.5s ease-in-out;
+      overflow: hidden;
+      &.active {
+        left: 55%;
+      }
+      & .signinForm {
+        transition-delay: .25s;
+      }
+      &.active .signinForm {
+        left: -100%;
+        transition-delay: .0s;
+      }
+      & .signupForm {
+        top: 100%;
+        transition-delay: .0s;
+      }
+      &.active .signupForm {
+        transition-delay: .25s;
+        top: 0;
+      }
+      .form {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 50px;
+        transition: .5s;
+        form {
+          h3 {
+            font-size: 25px;
+            font-weight: 500;
+            color: $black-color;
+            margin-bottom: 20px;
+          }
+          input {
+            width: 100%;
+            margin-bottom: 20px;
+            transition: .5s;
+            &:focus {
+              box-shadow: none;
+              border: 1px solid rgb(164, 164, 164);
+            }
+            &[type="submit"] {
+              background-color: $alt-green-color;
+              max-width: 100px;
+              color: white;
+              font-weight: 500;
+            }
+          }
+          .forgot {
+            color: $black-color;
+            text-decoration: underline;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

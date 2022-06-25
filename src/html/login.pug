@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    include pug/layout/meta
+    title Login - Store Zone 
+    include pug/layout/styles
+  body.login-page.d-flex.justify-content-center.align-items-center
+    .container.cont-login
+      .greenbg 
+        .box.signin 
+          h2 Have An Account ?
+          button.signinBtn.btn Sign In 
+        .box.signup 
+          h2 Don't Have An Account ?
+          button.signupBtn.btn Sign Up 
+      .form-bx.d-flex.justify-content-center.align-items-cetner
+        .form.signinForm
+          form.d-flex.flex-column.w-100.text-center
+            h3 Sign In 
+            input(type="text" placeholder="Username" class="form-control")
+            input(type="password" placeholder="Password" class="form-control")
+            input(type="submit", value="login").btn.m-auto
+            a(href="#" class="forgot") Forgot Password 
+        .form.signupForm
+          form.d-flex.flex-column.w-100.text-center
+            h3 Sign Up 
+            input(type="text" placeholder="Username" class="form-control")
+            input(type="email" placeholder="Email Address" class="form-control")
+            input(type="password" placeholder="Password" class="form-control")
+            input(type="password" placeholder="Confirm Password" class="form-control")
+            input(type="submit", value="Register").btn.m-auto
+    include pug/layout/scripts 
