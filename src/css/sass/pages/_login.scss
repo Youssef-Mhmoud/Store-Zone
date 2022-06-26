@@ -157,11 +157,28 @@
               box-shadow: none;
               border: 1px solid rgb(164, 164, 164);
             }
+            &[type="checkbox"] {
+              width: 6% !important;
+              height: 20px;
+              &:checked {
+                background-color: $black-color;
+                border-color: $black-color;
+              }
+            }
             &[type="submit"] {
               background-color: $alt-green-color;
               max-width: 100px;
               color: white;
               font-weight: 500;
+            }
+          }
+          .form-check-label {
+            width: 90%;
+            font-size: 14px;
+            margin-left: 10px;
+            a {
+              color: $black-color;
+              text-decoration: underline;
             }
           }
           .forgot {

@@ -22,14 +22,19 @@ html(lang="en")
             input(type="text" placeholder="Username" class="form-control")
             input(type="password" placeholder="Password" class="form-control")
             input(type="submit", value="login").btn.m-auto
-            a(href="#" class="forgot") Forgot Password 
+            a(href="#" class="forgot") Forgot Password..?
         .form.signupForm
-          form.d-flex.flex-column.w-100.text-center
-            h3 Sign Up 
+          form.d-flex.flex-column.w-100
+            h3.text-center Sign Up 
             input(type="text" placeholder="Username" class="form-control")
             input(type="email" placeholder="Email Address" class="form-control")
             input(type="password" placeholder="Password" class="form-control")
             input(type="password" placeholder="Confirm Password" class="form-control")
+            .checkandLabel 
+              input(class="form-check-input check-box" type="checkbox" id="term-and-cond")
+              <label class="form-check-label" for="term-and-cond">| agree to our 
+                a(href="#") terms and conditions </label>
+
             input(type="submit", value="Register").btn.m-auto
-    include pug/layout/scripts 
+    include pug/layout/scripts  
     script(src="login.js") 
