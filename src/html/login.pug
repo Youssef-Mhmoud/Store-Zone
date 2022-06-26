@@ -6,6 +6,7 @@ html(lang="en")
     include pug/layout/styles
   body.login-page.d-flex.justify-content-center.align-items-center
     .container.cont-login
+      h2.logo-login Store Zone
       .greenbg 
         .box.signin 
           h2 Have An Account ?
@@ -30,3 +31,4 @@ html(lang="en")
             input(type="password" placeholder="Confirm Password" class="form-control")
             input(type="submit", value="Register").btn.m-auto
     include pug/layout/scripts 
+    script(src="login.js") 

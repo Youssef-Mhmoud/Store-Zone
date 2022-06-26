@@ -1,16 +1,17 @@
-const signinBtn = document.querySelector('.signinBtn')
-const signupBtn = document.querySelector('.signupBtn')
-const form = document.querySelector('.form-bx')
-const body = document.querySelector('.login-page')
+const signinBtnForm = document.querySelector('.signinBtn')
+const signupBtnForm = document.querySelector('.signupBtn')
+const formLogin = document.querySelector('.form-bx')
+const bodyLogin = document.querySelector('.login-page')
+
 // Add Class Active
-signupBtn.addEventListener('click', (eo) => {
-  form.classList.add('active')
+signupBtnForm.addEventListener('click', (eo) => {
+  formLogin.classList.add('active')
   // Add Backgournd Color Login Page
-  body.classList.add('active')
+  bodyLogin.classList.add('active')
 })
 // Remove Class Active
-signinBtn.addEventListener('click', (eo) => {
-  form.classList.remove('active')
+signinBtnForm.addEventListener('click', (eo) => {
+  formLogin.classList.remove('active')
     // Remove Backgournd Color Login Page
-    body.classList.remove('active')
+    bodyLogin.classList.remove('active')
 })

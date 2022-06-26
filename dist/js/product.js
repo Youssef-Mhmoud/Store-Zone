@@ -1,0 +1,1 @@
+let sizeBtns=document.querySelectorAll(".size-radio");sizeBtns.forEach(e=>{e.addEventListener("click",e=>{console.log(e.target)})});

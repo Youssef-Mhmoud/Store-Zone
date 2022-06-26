@@ -14,6 +14,19 @@
     height: 500px;
     margin: 20px;
     // background-color: red;
+    .logo-login {
+      position: absolute;
+      top: -130px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+      font-size: 40px;
+      color: white;
+      @media ($max-large) {
+        font-size: 32px;
+        top: -60px;
+      }
+    }
     @media ($max-large) {
       & {
         display: flex;

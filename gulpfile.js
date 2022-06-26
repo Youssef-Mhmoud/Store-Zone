@@ -4,8 +4,9 @@ const gulp = require("gulp"),
   // { parallel } = require("gulp"),
   pug = require("gulp-pug"),
   uglify = require("gulp-uglify"),
-  concat = require("gulp-concat"),
-  autoprefixer = require("gulp-autoprefixer");
+  // concat = require("gulp-concat"),
+  autoprefixer = require("gulp-autoprefixer")
+
 
 // Html
 function html() {
@@ -29,14 +30,15 @@ function css() {
 // js
 function js() {
   return gulp
-    .src("src/js/*.js")
-    .pipe(concat("all.js"))
+    .src(["src/js/*.js", "src/js/*.js"])
+    // .pipe(concat("all.js"))
     .pipe(uglify())
     .pipe(gulp.dest("./dist/js"))
 }
 
 exports.default = () => {
   // gulp.watch(["src/**/*.*"], parallel(html, css, js));
+  require('./server');
   gulp.watch(["src/html/**/*.pug"], html);
   gulp.watch(["src/css/**/*.scss"], css);
   gulp.watch(["src/js/**/*.js"], js);
