@@ -22,9 +22,20 @@
       font-weight: bold;
       font-size: 40px;
       color: white;
+      background-color: $black-color;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 2px 5px 17px rgba(rgb(0, 0, 0),  .4);
+      span:nth-child(1) {
+        color: $red-color;
+      }
+      span:nth-child(2) {
+        color: $alt-green-color;
+      }
       @media ($max-large) {
-        font-size: 32px;
+        font-size: 30px;
         top: -60px;
+        padding: 6px;
       }
     }
     @media ($max-large) {
