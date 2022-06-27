@@ -19,22 +19,37 @@ html(lang="en")
         .form.signinForm
           form.d-flex.flex-column.w-100.text-center
             h3 Sign In 
-            input(type="text" placeholder="Username" class="form-control")
-            input(type="password" placeholder="Password" class="form-control")
+            input(type="text" placeholder="Username" class="form-control").mb-4
+            input(type="password" placeholder="Password" class="form-control").mb-4
             input(type="submit", value="login").btn.m-auto
             a(href="#" class="forgot") Forgot Password..?
         .form.signupForm
-          form.d-flex.flex-column.w-100
+          form.form-validate.d-flex.flex-column.w-100
             h3.text-center Sign Up 
-            input(type="text" placeholder="Username" class="form-control")
-            input(type="email" placeholder="Email Address" class="form-control")
-            input(type="password" placeholder="Password" class="form-control")
-            input(type="password" placeholder="Confirm Password" class="form-control")
+            .validation
+              input(type="text" placeholder="Username" class="form-control" id="name")
+              <i class="fa-solid fa-circle-check check-green"></i>
+              <i class="fa-solid fa-circle-exclamation exclamation-red"></i>
+              small Error Message
+            .validation
+              input(type="email" placeholder="Email Address" class="form-control" id="email")
+              <i class="fa-solid fa-circle-check check-green"></i>
+              <i class="fa-solid fa-circle-exclamation exclamation-red"></i>
+              small Error Message
+            .validation 
+              input(type="password" placeholder="Password" class="form-control" id="password")
+              <i class="fa-solid fa-circle-check check-green"></i>
+              <i class="fa-solid fa-circle-exclamation exclamation-red"></i>
+              small Error Message
+            .validation 
+              input(type="password" placeholder="Confirm Password" class="form-control" id="password2")
+              <i class="fa-solid fa-circle-check check-green"></i>
+              <i class="fa-solid fa-circle-exclamation exclamation-red"></i>
+              small Error Message
             .checkandLabel 
               input(class="form-check-input check-box" type="checkbox" id="term-and-cond")
               <label class="form-check-label" for="term-and-cond">| agree to our 
                 a(href="#") terms and conditions </label>
-
             input(type="submit", value="Register").btn.m-auto
     include pug/layout/scripts  
     script(src="login.js") 

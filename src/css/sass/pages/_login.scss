@@ -149,9 +149,58 @@
             color: $black-color;
             margin-bottom: 20px;
           }
+          .validation {
+            position: relative;
+            margin: 15px 0;
+            height: 40px;
+            svg {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 3%;
+              display: none;
+            }
+            small {
+              display: none;
+            }
+            &.error {
+              input {
+                border: 2px solid red;
+                transition: none;
+              }
+              .check-green {
+                display: none;
+              }
+              .exclamation-red {
+                color: red;
+                display: block;
+              }
+              small {
+                margin: 0;
+                color: red;
+                display: block;
+              }
+            }
+            &.correct {
+              input {
+                border: 2px solid green;
+                transition: none;
+              }
+              .exclamation-red, small {
+                display: none;
+              }
+              .check-green {
+                color: green;
+                display: block;
+              }
+            }
+          }
+          .checkandLabel {
+            margin-top: 20px;
+          }
           input {
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 0px;
             transition: .5s;
             &:focus {
               box-shadow: none;
@@ -160,6 +209,7 @@
             &[type="checkbox"] {
               width: 6% !important;
               height: 20px;
+              margin-bottom: 15px;
               &:checked {
                 background-color: $black-color;
                 border-color: $black-color;
