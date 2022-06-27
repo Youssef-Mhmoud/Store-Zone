@@ -1,8 +1,10 @@
-let sizeBtns = document.querySelectorAll('.size-radio')
-
+let sizeBtns = document.querySelectorAll(".size-radio");
 
 sizeBtns.forEach((item) => {
-  item.addEventListener('click', (eo) => {
-    console.log(eo.target);
-  })
-});   
+  item.addEventListener("click", (eo) => {
+    eo.target.parentElement.querySelectorAll(".check").forEach((ele) => {
+      ele.classList.remove("check");
+    });
+    eo.target.classList.add('check')
+  });
+});
