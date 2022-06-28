@@ -1,10 +1,11 @@
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: $black-color;
   z-index: 9;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.30);
   // Navbar
   nav {
     padding: 10px;
@@ -13,7 +14,7 @@ header {
       font-size: 35px;
       font-weight: bold;
       // color: $alt-white-color;
-      &:hover a{
+      &:hover a {
         color: white;
       }
       span:first-child {
@@ -24,44 +25,50 @@ header {
       }
     }
     .nav-items {
-      // Form
-      form {
-        width: 500px;
-        display: flex;
-        .search-input {
-          width: 80% !important;
-          border-radius: 6px 0 0 6px;
-          outline: none;
-          text-transform: capitalize;
-          caret-color: $black-color;
-          color: $black-color;
-          &::placeholder {
-            color: $alt-black-color;
-          }
-          &:focus {
-            box-shadow: none;
-            border-color: white;
-            outline: none;
-          }
-        }
-        .btn {
-          background-color: $alt-green-color;
-          border-radius: 0 6px 6px 0;
-          color: $black-color;
-          transition: .3s;
-          &:focus {
-            box-shadow: none;
-          }
-          &:hover {
-            background-color: $green-color;
-          }
+      ul {
+        // Media Query
+        li {
+          margin-top: 10px;
         }
       }
       a {
-        margin-left: 22px;
-        transition: .3s;
-        &:hover {
+        display: block;
+        padding: 10px 0;
+        margin-left: 40px;
+        transition: 0.3s;
+        font-size: 20px;
+        position: relative;
+        &::before {
+          content: attr(data-name);
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 10px 0;
           color: $alt-green-color;
+          width: 0;
+          display: inline-block;
+          border-bottom: 2px solid;
+          overflow: hidden;
+          transition: 0.4s;
+        }
+        &:hover {
+          color: white;
+        }
+        &:hover::before {
+          width: 100%;
+        }
+        &.user-fa:hover::before {
+          color: $alt-green-color;
+          width: 0;
+        }
+        &.user-fa:hover {
+          color: $alt-green-color;
+        }
+        &.cart-fa:hover {
+          color: $alt-green-color;
+        }
+        &.cart-fa:hover::before {
+          width: 0;
         }
         svg {
           font-size: 25px;

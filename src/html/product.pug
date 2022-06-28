@@ -2,7 +2,7 @@ doctype html
 html(lang="en")
   head
     include pug/layout/meta
-    title Product - Store Zone
+    title Product - 
     include pug/layout/styles
   body 
     include pug/layout/header
@@ -11,13 +11,13 @@ html(lang="en")
       .container.d-flex.justify-content-between.mt-5
         .img-slider.position-relative
         .details 
-          h2 T-Shirt 
-          p.product-details Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-          span.price $99
-          span.actual-price $199
-          span.actual-price-dis (50% OFF)
+          h2 
+          p.product-details
+          span.price
+          span.actual-price 
+          span.actual-price-dis
           p.se-size Select Size 
-          input(type="radio" name="size" checked value="s" hidden id="s-size")
+          input(type="radio" name="size" value="s" hidden id="s-size")
           label(for="s-size" class="size-radio check") s 
           input(type="radio" name="size" value="s" hidden id="m-size")
           label(for="m-size" class="size-radio") m 
@@ -32,26 +32,8 @@ html(lang="en")
       .container
         h2.heading
           |Description 
-        p.text-black-50.lh-lg Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugiat explicabo modi consequatur eos? Velit, quidem. Quam distinctio quae ullam aperiam vitae laborum ipsum sunt voluptatibus dolorem fugit, adipisci veniam nam possimus maxime, dolores odit et ut illum accusamus. Illo consequuntur maxime modi neque iusto, vel molestiae mollitia quibusdam fugiat praesentium dolor at velit reprehenderit rem provident omnis esse quam a voluptatibus, aperiam quae. Animi ratione aperiam reprehenderit iure iusto cupiditate suscipit velit sit ex aliquam, dolores quisquam. Atque cumque incidunt delectus quod eaque, libero deleniti quibusdam, tempora fugit magnam dolorum dolores voluptatibus architecto laboriosam inventore perferendis modi temporibus, iste accusamus minus veniam eum ipsum consequuntur provident? Impedit minima ullam repellendus distinctio aspernatur perspiciatis, nobis iure alias quas dolores consequuntur commodi amet. Non a laboriosam obcaecati, deserunt illum fuga error rerum blanditiis esse consectetur reiciendis libero quae possimus saepe minus natus quidem pariatur nesciunt debitis maiores. Consequuntur repudiandae veritatis eaque cupiditate magnam facilis voluptas cumque qui autem saepe excepturi quam quae incidunt molestiae, deserunt nemo reiciendis sunt perspiciatis enim minus debitis illum. Modi quas beatae quibusdam, quis eligendi inventore dolor, rerum omnis nostrum, eos voluptate. Quae nobis veniam vel natus voluptates velit iure, iste ut aliquid non nulla molestias suscipit veritatis magnam animi ipsum, aperiam placeat repudiandae aspernatur accusantium excepturi saepe esse tenetur qui! Soluta sapiente necessitatibus est fugit reprehenderit! Dicta natus aperiam ducimus consequatur, doloremque iusto debitis fugiat voluptas aliquid vero unde a iste maxime ex voluptate eaque? Tempore tempora amet repellat, sed veritatis asperiores deleniti alias nam neque esse voluptates, repudiandae laborum dicta harum dolores? Culpa a reprehenderit sit nobis. Cumque expedita, tempora qui delectus soluta obcaecati odit eos minima nesciunt molestiae, quod alias, quas asperiores at voluptate ut accusantium iusto! Ut, fugiat! Voluptates, id omnis ipsam perspiciatis magni, ab consequuntur commodi voluptas quasi fugit ipsa doloribus impedit quas.
-    //- Section Slider Product
-    -for (let i = 0; i < 2; i++)
-      section.product.pt-5 
-        .container
-          h2.product-cat T-Shirts
-          .product-container
-            span.pre <i class="fa-solid fa-chevron-left"></i>
-            span.next <i class="fa-solid fa-chevron-right"></i>
-            //- For Loop To iteration Elements
-            -for (let i = 0; i < 10; i++)
-              .product-card
-                .product-img
-                  span.discount 50% OFF
-                  img(src="/img/6.jpg" class="img-fluid" alt="")
-                  button.btn.card-btn Add To wishlist
-                .product-info.w-100 
-                  h2 Brand 
-                  p Some Details About Brand
-                  span.price $20
-                  spna.actual-price $40
+        p.text-black-50.lh-lg.mb-5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam doloribus nesciunt doloremque assumenda ipsum veniam temporibus dolorem voluptate maiores accusantium totam exercitationem, ea qui pariatur nostrum tempore dolore laboriosam nulla id quos sunt optio explicabo? Repellat amet sunt accusamus ex quia, maxime cupiditate saepe magnam aperiam id odio dolore explicabo totam autem harum dolorem quo nulla minus voluptatum fugiat dolores, at in. Ad minus officiis saepe vel accusantium, soluta quas eos, quos minima, ratione esse! Optio laborum quia perspiciatis autem aut ipsam, libero reprehenderit unde commodi odio voluptate mollitia animi eligendi delectus placeat soluta voluptates fuga at porro. Maiores quae assumenda illo quam inventore nam eos suscipit, autem nemo repellat porro rem quidem, magni in tempore itaque delectus aspernatur recusandae corrupti! Commodi dolorum voluptate atque, saepe earum alias delectus nesciunt ullam est! Officia omnis velit, tempora aspernatur, dicta perferendis nostrum numquam quas dolorum doloribus provident quia autem impedit repudiandae?
+    section.container-for-card
+
     include pug/layout/footer
     include pug/layout/scripts

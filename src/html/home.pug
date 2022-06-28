@@ -12,24 +12,26 @@ html(lang="en")
     //- Start Product Card
     section.product
       .container
-        h2.product-cat Best Seller
+        h2.product-cat.text-uppercase Best Seller
         .product-container
           span.pre <i class="fa-solid fa-chevron-left"></i>
-          spna.next <i class="fa-solid fa-chevron-right"></i>
+          span.next <i class="fa-solid fa-chevron-right"></i>
           //- For Loop To iteration Elements
           -for (let i = 0; i < 10; i++)
             .product-card 
               .product-img
                 span.discount 50% OFF
                 img(src="/img/1.jpg" class="img-fluid" alt="")
-                button.btn.card-btn Add To wishlist
+                a(href="cart.html").btn.card-btn Add To Cart
               .product-info.w-100 
                 h2 Brand 
                 p Some Details About Brand
                 span.price $20
-                spna.actual-price $40
+                span.actual-price $40
     //- End Product Card
     //- Start Collection
+    h2.text-center.features-sec.text-uppercase Featured Products
+    p.text-center.text-black-50 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem, ipsum dolor.
     seciton.main-collection.w-100
       a(href="#" class="collection position-relative")
         img(src="/img/2.jpg", alt="" class="img-fluid")
@@ -44,26 +46,33 @@ html(lang="en")
         img(src="/img/5.jpg", alt="" class="img-fluid")
         p.title-collection Modern <br> Models 
     //- End Collection
-    //- Start Brands
-    section.product.pt-5.mt-5 
-      .container
-        h2.product-cat T-Shirts
-        .product-container
-          span.pre <i class="fa-solid fa-chevron-left"></i>
-          spna.next <i class="fa-solid fa-chevron-right"></i>
-          //- For Loop To iteration Elements
-          -for (let i = 0; i < 10; i++)
-            .product-card
-              .product-img
-                span.discount 50% OFF
-                img(src="/img/6.jpg" class="img-fluid" alt="")
-                button.btn.card-btn Add To wishlist
-              .product-info.w-100 
-                h2 Brand 
-                p Some Details About Brand
-                span.price $20
-                spna.actual-price $40
-    //- End Brands
+    //- Start banners
+    section.main-banner
+      h2.text-center.text-uppercase.features-sec LATEST EVENTS
+      p.text-center.text-black-50 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, voluptate?
+      section.section-banner.container
+        .banner-box
+          h4 Limited Deal
+          h2 Buy 1 Get 1 For Free
+          span The Best Shirt On Sale
+          button.btn Learn More
+        .banner-box.banner-box2
+          h4 Winter T-shirt
+          h2 Up Comming Season 
+          span The Best Shirt On Sale
+          button.btn Collection
+      //- Section Banners 2
+      section.section-banner2.container
+        .banner-box.banner1
+          h2 SEASONAL SALE
+          h3 Winter Collection -50% OFF
+        .banner-box.banner2
+          h2 NEW SHIRTS COLLECTION
+          h3 Spring &amp	Summer
+        .banner-box.banner3
+          h2 SHOES &amp	T-SHIRTS 
+          h3 New Trendy Prints
+    //- End banners
     //- Footer
     include pug/layout/footer
     include pug/layout/scripts   

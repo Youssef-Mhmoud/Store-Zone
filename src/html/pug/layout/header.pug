@@ -1,15 +1,22 @@
 header 
-  nav.d-flex.container.justify-content-between
-    .brand 
+  nav.d-flex.container.justify-content-between.align-items-center
+    .brand
       a(href="home.html")  
         span Store 
         span Zone 
-    .nav-items.d-flex.align-items-center  
-      form(action="")
-        input(type="text" class="search-input form-control" placeholder="Search") 
-        button.btn
-          i(class="fa-solid fa-magnifying-glass")
-      a(href="#")
-        i(class="fa-solid fa-cart-shopping")
-      a(href="login.html")  
-        i(class="fa-solid fa-circle-user")
+    .nav-items
+      ul.d-flex.align-items-center  
+        li 
+          a(href="home.html" data-name="Home") Home
+        li
+          a(href="about.html" data-name="About") About
+        li 
+          a(href="product.html" data-name="Product") Product 
+        li
+          a(href="contact.html" data-name="Contact") Contact 
+        li 
+          a(href="cart.html" class="cart-fa")
+            i(class="fa-solid fa-cart-shopping")
+        li
+          a(href="login.html" class="user-fa")  
+            i(class="fa-solid fa-circle-user")
