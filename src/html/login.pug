@@ -6,8 +6,6 @@ html(lang="en")
     include pug/layout/styles
   body.login-page.d-flex.justify-content-center.align-items-center
     .container.cont-login
-      a(href="home.html") 
-        h2.logo-login <span>Store</span> <span>Zone</span>
       .greenbg 
         .box.signin 
           h2 Have An Account ?
@@ -50,6 +48,6 @@ html(lang="en")
               input(class="form-check-input check-box" type="checkbox" id="term-and-cond")
               <label class="form-check-label" for="term-and-cond">| agree to our 
                 a(href="#") terms and conditions </label>
-            input(type="submit", value="Register").btn.m-auto
+            input(type="submit", value="Register").btn
     include pug/layout/scripts  
     script(src="login.js") 

@@ -23,9 +23,17 @@
     text-align: center;
     line-height: 1.4;
     letter-spacing: 5px;
+    @media ($max-med) {
+    & {
+      font-size: 35px;
+    }
+  }
     span:nth-child(1),span:nth-child(2) {
       font-size: 100px;
       font-weight: 700;
+      @media ($max-med) {
+        font-size: 50px;
+      }
     }
     span:nth-child(1) {
       color: $red-color;

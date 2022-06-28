@@ -14,31 +14,7 @@
     height: 500px;
     margin: 20px;
     // background-color: red;
-    .logo-login {
-      position: absolute;
-      top: -130px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-weight: bold;
-      font-size: 40px;
-      color: white;
-      background-color: $black-color;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 2px 5px 17px rgba(rgb(0, 0, 0),  .4);
-      span:nth-child(1) {
-        color: $red-color;
-      }
-      span:nth-child(2) {
-        color: $alt-green-color;
-      }
-      @media ($max-large) {
-        font-size: 30px;
-        top: -60px;
-        padding: 6px;
-      }
-    }
-    @media ($max-large) {
+    @media ($max-med) {
       & {
         display: flex;
         justify-content: center;
@@ -57,7 +33,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      @media ($max-large) {
+      @media ($max-med) {
         & {
           top: 0;
           height: 100%;
@@ -71,7 +47,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        @media ($max-large) {
+        @media ($max-med) {
           & {
             position: absolute;
             width: 100%;
@@ -106,7 +82,7 @@
       box-shadow: 0 5px 45px rgba( black, .25);
       transition: 0.5s ease-in-out;
       overflow: hidden;
-      @media ($max-large) {
+      @media ($max-med) {
         & {
           width: 100%;
           height: 500px;
@@ -196,7 +172,9 @@
             }
           }
           .checkandLabel {
-            margin-top: 20px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
           }
           input {
             width: 100%;
@@ -209,7 +187,7 @@
             &[type="checkbox"] {
               width: 6% !important;
               height: 20px;
-              margin-bottom: 15px;
+              margin-bottom: 10px;
               &:checked {
                 background-color: $black-color;
                 border-color: $black-color;
@@ -220,12 +198,14 @@
               max-width: 100px;
               color: white;
               font-weight: 500;
+              margin: 15px auto;
             }
           }
           .form-check-label {
             width: 90%;
             font-size: 14px;
             margin-left: 10px;
+            font-size: 12px;
             a {
               color: $black-color;
               text-decoration: underline;

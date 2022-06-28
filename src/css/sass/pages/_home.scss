@@ -122,6 +122,9 @@
   grid-template-columns: repeat(2,1fr);
   gap: 20px;
   padding-bottom: 100px;
+  @media ($max-med) {
+    grid-template-columns: repeat(1,1fr);
+  }
   a {
     img {
       object-fit: cover;

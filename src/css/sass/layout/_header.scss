@@ -27,7 +27,7 @@ header {
     .nav-items {
       ul {
         // Media Query To Ul NavBar
-        @media ($max-large) {
+        @media ($max-med) {
           & {
             display: flex;
             align-items: flex-start;
@@ -37,19 +37,46 @@ header {
             top: 0;
             right: -300px;
             height: 100vh;
+            z-index: 2;
             width: 300px;
             background-color: $alt-black-color;
             box-shadow: 0 40px 60px rgba(0, 0, 0, 0.107);
             padding: 80px 40px 0 0;
+            transition: .5s;
           }
           &.active {
             right: 0;
+          }
+          .cart-fa {
+            display: none;
           }
         }
         li {
           margin-top: 10px;
         }
+        // Close Icon Style 
+        #close {
+          display: none;
+        }
+        @media ($max-med) {
+          #close {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            display: block;
+            color: white;
+            transition: .3s;
+            cursor: pointer;
+            &:hover {
+              color: $alt-green-color;
+            }
+            svg {
+              font-size: 30px;
+            }
+          }
+        }
       }
+      // Links Style 
       a {
         display: block;
         padding: 10px 0;
@@ -76,18 +103,11 @@ header {
         &:hover::before {
           width: 100%;
         }
-        &.user-fa:hover::before {
-          color: $alt-green-color;
+        &.user-fa:hover::before,&.cart-fa:hover::before {
           width: 0;
         }
-        &.user-fa:hover {
+        &.cart-fa:hover,&.user-fa:hover {
           color: $alt-green-color;
-        }
-        &.cart-fa:hover {
-          color: $alt-green-color;
-        }
-        &.cart-fa:hover::before {
-          width: 0;
         }
         svg {
           font-size: 25px;
@@ -99,7 +119,7 @@ header {
       display: none;
     }
     // Mobile Responsive
-    @media ($max-large) {
+    @media ($max-med) {
       #mobile {
         display: flex;
         align-items: center;
