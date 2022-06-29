@@ -4,6 +4,22 @@ footer {
   padding-bottom: 80px;
   background-color: $black-color; 
   .footer-content {
+    @media ($max-med) {
+      flex-direction: column;
+      .category-container {
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center !important;
+        gap: 30px;
+        margin: auto;
+        padding-right: 18px;
+        padding-bottom: 80px;
+        padding-top: 50px;
+      }
+      .brand {
+        font-size: 40px !important;
+      }
+    }
     .brand {
       font-size: 60px;
       font-weight: bold;

@@ -111,6 +111,9 @@
   font-size: 45px;
   color: $black-color;
   font-weight: 700;
+  @media ($max-med) {
+    font-size: 35px;
+  }
   & + p {
     padding-bottom: 70px;
     letter-spacing: 1.2px;
@@ -119,11 +122,11 @@
 }
 .main-collection {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding-bottom: 100px;
   @media ($max-med) {
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   a {
     img {
@@ -157,16 +160,19 @@
   background-color: $alt-white-color;
 }
 .section-banner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 40px;
+  @media ($min-med) {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  }
   .banner-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url(/img/14.jpg);
-    min-width: 48.5%;
+    max-width: 100%;
     height: 50vh;
     text-align: center;
     background-size: cover;
@@ -199,9 +205,9 @@
         box-shadow: none;
       }
       &:hover {
-      border: 2px solid white;
-      background-color: white;
-      color: $black-color;
+        border: 2px solid white;
+        background-color: white;
+        color: $black-color;
       }
     }
   }
@@ -219,45 +225,46 @@
     button {
       border: 2px solid $black-color;
       color: $black-color;
-    &:hover {
-      color: white;
-      background-color: $black-color;
-      border: 2px solid $black-color;
-    }
+      &:hover {
+        color: white;
+        background-color: $black-color;
+        border: 2px solid $black-color;
+      }
     }
   }
 }
 // End Banners
-// Banner 2 
+// Banner 2
 .section-banner2 {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
   padding: 40px 10px 20px;
-  .banner-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    background-image: url(/img/14.jpg);
-    min-width: 30%;
-    height: 30vh;
-    background-size: cover;
-    background-position: center;
-    padding: 30px;
-    margin-bottom: 20px;
-    &.banner1 {
+}
+.banner-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(/img/14.jpg);
+  min-width: 30%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+  margin-bottom: 20px;
+  &.banner1 {
     background-image: url(/img/11.jpg);
     h2 {
       color: $red-color;
       font-weight: 700;
-    } 
+    }
     h3 {
       font-weight: 300;
       color: $alt-red-color;
     }
-    }
-    &.banner2 {
+  }
+  &.banner2 {
     background-image: url(/img/13.jpg);
     h2 {
       color: $blue-color;
@@ -267,17 +274,21 @@
       color: $alt-blue-color;
       font-weight: 300;
     }
-    }
-    &.banner3 {
+  }
+  &.banner3 {
     background-image: url(/img/9.jpg);
-    h2 {
-      font-weight: 700;
-      color: white;
-    }
-    h3 {
-      font-weight: 300;
-      color: $alt-white-color;
-    }
+    @media ($min-med) and ($max-lg) {
+      & {
+        grid-column: span 2;
+      }
+      h2 {
+        font-weight: 700;
+        color: white;
+      }
+      h3 {
+        font-weight: 300;
+        color: $alt-white-color;
+      }
     }
   }
 }
