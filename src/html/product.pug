@@ -2,20 +2,21 @@ doctype html
 html(lang="en")
   head
     include pug/layout/meta
-    title Product - 
+    title Products
     include pug/layout/styles
   body 
     include pug/layout/header
     //- Section Details
     section.product-details.w-100
-      .container.d-flex.justify-content-between.mt-5
+      .container.d-flex.justify-content-between.mt-5.gap-5
         .img-slider.position-relative
+          img(src="img/12.jpg", alt="")
         .details 
-          h2 
-          p.product-details
-          span.price
-          span.actual-price 
-          span.actual-price-dis
+          h2 Nike Shoes
+          p.product-details Lorem, ipsum dolor sit amet consectetur adipisicing.
+          span.price 99$
+          span.actual-price 200$ 
+          span.actual-price-dis (50% OFF)
           p.se-size Select Size 
           input(type="radio" name="size" value="s" hidden id="s-size")
           label(for="s-size" class="size-radio check") s 
@@ -25,15 +26,59 @@ html(lang="en")
           label(for="l-size" class="size-radio") l
           input(type="radio" name="size" value="s" hidden id="xl-size")
           label(for="xl-size" class="size-radio") xl
-          button.btn Add To Cart
-          button.btn.wishlist-btn Add To Wishlist
+          button.btn.add-to-cart Add To Cart
     //- Section Description
     section.details-des
       .container
         h2.heading
           |Description 
         p.text-black-50.lh-lg.mb-5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quam doloribus nesciunt doloremque assumenda ipsum veniam temporibus dolorem voluptate maiores accusantium totam exercitationem, ea qui pariatur nostrum tempore dolore laboriosam nulla id quos sunt optio explicabo? Repellat amet sunt accusamus ex quia, maxime cupiditate saepe magnam aperiam id odio dolore explicabo totam autem harum dolorem quo nulla minus voluptatum fugiat dolores, at in. Ad minus officiis saepe vel accusantium, soluta quas eos, quos minima, ratione esse! Optio laborum quia perspiciatis autem aut ipsam, libero reprehenderit unde commodi odio voluptate mollitia animi eligendi delectus placeat soluta voluptates fuga at porro. Maiores quae assumenda illo quam inventore nam eos suscipit, autem nemo repellat porro rem quidem, magni in tempore itaque delectus aspernatur recusandae corrupti! Commodi dolorum voluptate atque, saepe earum alias delectus nesciunt ullam est! Officia omnis velit, tempora aspernatur, dicta perferendis nostrum numquam quas dolorum doloribus provident quia autem impedit repudiandae?
-    section.container-for-card
-
+    h2.text-center.fs-1.pt-5 More Products 
+    p.text-center.text-black-50 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, autem!
+    .container.cont-card.pt-5.pb-5
+      <div class="card" style="width: 18rem;">
+        <img src="img/19.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+          span.d-block.pb-2.text-black-50 Nike
+          <h5 class="card-title">Nike Shoes </h5>
+          <p class="card-price"> 50$ </p>
+          .button-cart.d-flex.justify-content-between
+            <a href="product.html" class="btn  btn-card">More Details </a>
+            <a href="#" class="btn  btn-card"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="img/17.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+          span.d-block.pb-2.text-black-50 Youth
+          <h5 class="card-title">T-Shirt For Youth</h5>
+          <p class="card-price"> 170$ </p>
+          .button-cart.d-flex.justify-content-between
+            <a href="product.html" class="btn  btn-card">More Details </a>
+            <a href="#" class="btn  btn-card"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="img/10.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+          span.d-block.pb-2.text-black-50 Classic
+          <h5 class="card-title">For Men</h5>
+          <p class="card-price"> 250$ </p>
+          .button-cart.d-flex.justify-content-between
+            <a href="product.html" class="btn  btn-card">More Details </a>
+            <a href="#" class="btn  btn-card"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="img/11.jpg" class="card-img-top" alt="">
+        <div class="card-body">
+          span.d-block.pb-2.text-black-50 Adidas
+          <h5 class="card-title">Adidas Shoes </h5>
+          <p class="card-price"> 80$ </p>
+          .button-cart.d-flex.justify-content-between
+            <a href="product.html" class="btn  btn-card">More Details </a>
+            <a href="#" class="btn  btn-card"><i class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div>
     include pug/layout/footer
     include pug/layout/scripts
