@@ -1,2 +1,6 @@
 # Ignore Node Moudules
 node_modules
+.firebaserc
+firebase.json
+public
+.firebase
