@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+  head
+    include pug/layout/meta
+    title Store Zone
+    include pug/layout/styles
+  body 
+    //- Header
+    include pug/layout/header
+    section.about-page
+      h2.text-center.mb-5.features-sec.pb-3.text-uppercase About Us
+      .container.d-flex.justify-content-between
+        .img-about 
+          img(src="img/20.png", alt="")
+        .des-about.text-center.ps-5
+          .h2.heading-about
+            | Who We Are 
+          p.text-white-50 Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellat animi nam. Odit mollitia fugiat laboriosam! Maxime nulla quidem inventore non, libero animi nemo officiis repellat quia eaque dolorem corporis, iure quasi dolore praesentium a, quo optio ex earum debitis nam eligendi tempore facere ab? Eum vero quaerat enim saepe. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus atque accusantium, ratione rerum et eveniet quisquam labore placeat dignissimos expedita, nihil omnis eligendi veniam, nisi molestiae animi maiores? Eos, ut.
+      .container.cont-about.d-flex.justify-content-between.gap-4
+        .card-about
+          h2 Leadership Principles
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate facilis impedit dolores iure. Odit adipisci tenetur voluptatibus voluptas exercitationem quia?
+          button.btn Learn More <i class="fa-solid fa-arrow-right-long"></i>
+        .card-about
+          h2 Our Positions
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate facilis impedit dolores iure. Odit adipisci tenetur voluptatibus voluptas exercitationem quia?
+          button.btn Learn More <i class="fa-solid fa-arrow-right-long"></i>
+        .card-about
+          h2 Our Achievements
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate facilis impedit dolores iure. Odit adipisci tenetur voluptatibus voluptas exercitationem quia?
+          button.btn Learn More <i class="fa-solid fa-arrow-right-long"></i>
+    section.about-page-2
+      h2.features-sec.text-center.text-white.position-relative Download Our App
+      .container.d-flex.justify-content-between
+        .img-app
+          img(src="img/22.svg", alt="")
+          .app-down 
+            .brand 
+                span Store 
+                span Zone  
+            p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            button.btn Download
+        .dec-app.pt-5.w-50
+          h4.fs-2.ms-4.text-white Features App 
+          ul 
+            li Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            li Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            li Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            li Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            li Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    section.about-page-3 
+      h2.fs-1.text-center.text-uppercase you are welcome any time  <i class="fa-regular fa-face-smile"></i>
+    //- Footer
+    include pug/layout/footer
+    include pug/layout/scripts

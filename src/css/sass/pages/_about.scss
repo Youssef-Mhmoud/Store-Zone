@@ -1,0 +1,158 @@
+.about-page {
+  background-color: $black-color;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  h2 {
+    color: white;
+  }
+  .img-about {
+    img {
+      width: 550px;
+      border-radius: 10px;
+    }
+  }
+  .des-about {
+    .heading-about {
+      color: white;
+      font-size: 40px;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 20px;
+      line-height: 2;
+    }
+  }
+  .card-about {
+    margin-top: 90px;
+    color: white;
+    background-color: $alt-black-color;
+    padding: 30px;
+    border-radius: 10px;
+    h2 {
+      color: $green-color;
+    }
+    p {
+      margin-top: 20px;
+      opacity: 0.7;
+      line-height: 2;
+    }
+    button {
+      background-color: $alt-green-color;
+      color: $black-color;
+      font-weight: 600;
+      &:hover svg {
+        animation: arrow-right 0.7s infinite;
+        @keyframes arrow-right {
+          100% {
+            transform: translateX(8px);
+          }
+        }
+      }
+      svg {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+.about-page-2 {
+  background: url('../img/24.jpg');
+  background-size: cover;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: black, $alpha: .9);
+  }
+  .img-app {
+    position: relative;
+  }
+  img {
+    color: black;
+    width: 600px;
+    display: block;
+  }
+  .app-down {
+    position: absolute;
+    z-index: 3;
+    left: 33%;
+    text-align: center;
+    top: 14%;
+    max-width: 236px;
+    background: rgba(255, 255, 255, 0.038);
+    box-shadow: 0 2px 32px 0 rgba(249, 249, 249, 0.2);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 2px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 10px;
+    .brand {
+      font-size: 35px;
+      font-weight: bold;
+      // color: $alt-white-color;
+      span:first-child {
+        color: $red-color;
+      }
+      span:last-child {
+        color: $alt-green-color;
+      }
+    }
+    p {
+      margin: 100px 0;
+      color: white;
+    }
+    button {
+      background-color: $red-color;
+      color: white;
+    }
+  }
+  .dec-app {
+    position: relative;
+    ul {
+      margin-top: 20px;
+    li {
+      color: white;
+      padding: 20px 0;
+      transition: .4s;
+      opacity: .6;
+      cursor: pointer;
+      &:hover {
+        padding-left: 10px;
+        opacity: 1;
+      }
+      &::before {
+        content: '\f101';
+        font-family: "Font Awesome 5 Free";
+        font-weight: bold;
+        margin-right: 10px;
+        color: $blue-color;
+      }
+    }
+    }
+  }
+}
+.about-page-3 {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  h2 {
+    background-color: $black-color;
+    width: fit-content;
+    margin: auto;
+    padding: 20px;
+    color: $white-color;
+    border-radius: 5px;
+    animation: heart-effect 6s infinite;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+    @keyframes heart-effect {
+      0%,100% {
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
