@@ -2,12 +2,13 @@
   "homepage": "https://Youssef-Mhmoud.github.io/Store-Zone",
   "name": "training-java",
   "version": "1.0.0",
-  "description": "",
+  "description": "* Html-Css-Javascript",
   "main": "index.js",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -35,5 +36,12 @@
   "browserslist": [
     "last 2 version",
     "> 2%"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Youssef-Mhmoud/Store-Zone.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Youssef-Mhmoud/Store-Zone/issues"
+  }
 }
