@@ -22,5 +22,5 @@ window.addEventListener('scroll', (eo) => {
   manageAnimation(imgAbout,350)
   manageAnimation(desAbout,350)
   cardsAbout.forEach(manageAnimation)
-  manageAnimation(imgMobile,350)
-})
+  manageAnimation(imgMobile,250)
+}) 
