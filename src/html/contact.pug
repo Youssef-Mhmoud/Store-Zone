@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    include pug/layout/meta
+    title Contact
+    include pug/layout/styles
+  body 
+    //- Header
+    include pug/layout/header
+    .landing-contact
+      h2 Contact Us <i class="fa-solid fa-phone-flip"></i>
+    section.contact-sec
+      .container.p-5
+        h2.text-center.mt-5.fs-1 Get In Touch 
+        p.text-center.text-black-50 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas?
+        .form-contact.mt-5
+          form
+            .input-name.d-flex.gap-5.mb-4.mt-4
+              input(type="text", placeholder="First Name").form-control
+              input(type="text", placeholder="Last Name").form-control
+            .input-name.d-flex.gap-5.mb-4.mt-4
+              input(type="email", placeholder="E-mail").form-control
+              input(type="text", placeholder="Phone").form-control
+            textarea(name="message", placeholder="Message", spellcheck="false").form-control.area-message
+            input(type="submit", value="Send").btn
+            .social.text-center
+              <i class="fa-brands fa-twitter-square"></i>
+              <i class="fa-brands fa-facebook-square"></i>
+              <i class="fa-brands fa-pinterest-square"></i>
+              <i class="fa-brands fa-whatsapp-square"></i>
+    include pug/layout/footer
+    include pug/layout/scripts 
