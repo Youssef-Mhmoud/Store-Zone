@@ -5,6 +5,11 @@
   display: block;
   margin: auto;
   width: 700px;
+  @media ($max-sm) {
+    & {
+      width: 100%;
+    }
+  }
 }
 .four-0-four {
   text-align: center;
@@ -15,4 +20,4 @@
     color: $blue-color;
     text-decoration: underline;
   }
-}
+} 
