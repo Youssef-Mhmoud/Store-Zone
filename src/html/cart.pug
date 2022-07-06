@@ -2,14 +2,14 @@ doctype html
 html(lang="en")
   head
     include pug/layout/meta
-    title Store Zone
+    title Your Cart
     include pug/layout/styles
   body 
     //- Header
     include pug/layout/header
     section.cart-page
       .container 
-        table.w-100
+        table.w-100.cont-table
           tr
             th Product
             th Quantity
@@ -23,7 +23,7 @@ html(lang="en")
                   small Price: $50.00
                   a(href="").btn.mt-5 Remove 
             td 
-              button.quan <span class="min">-</span> <span class="num"> 1 </span><span class="plus">+</span>
+              input(type="number", name="")
             td
               small Price: $50.00
           tr 
@@ -33,12 +33,10 @@ html(lang="en")
                 div 
                   p Shoes 
                   small Price: $50.00
-                  a(href="").btn.mt-5 Remove 
+                  a(href="").btn.mt-3 Remove 
             td 
-              button.quan <span class="min">-</span> <span class="num"> 1 </span><span class="plus">+</span>
+              input(type="number", name="")
             td
               small Price: $50.00
-        .total
-          p Total : $50.00
     include pug/layout/footer
     include pug/layout/scripts

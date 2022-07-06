@@ -1,5 +1,5 @@
 .cart-page {
-  padding: 200px;
+  padding: 150px 0;
   th {
     background-color: $black-color;
     text-align: left;
@@ -12,13 +12,20 @@
   }
   .cart-info {
     img {
-      width: 200px;
+      width: 180px;
       margin-right: 10px;
     }
     a {
       display: block;
       background-color: $black-color;
       color: white;
+    }
+  }
+  input[type="number"] {
+    width: 50px;
+    text-align: center;
+    &:focus {
+      outline: none;
     }
   }
   .quan {
@@ -38,14 +45,5 @@
       color: $black-color;
     }
     }
-  }
-  .total {
-    background-color: $black-color;
-    color: white;
-    width: fit-content;
-    margin: 100px auto 0px;
-    font-size: 30px;
-    border-radius: 4px;
-    padding: 10px 15px;
   }
 }

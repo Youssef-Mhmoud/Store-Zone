@@ -1,5 +1,0 @@
-let plus = document.querySelector('.plus')
-let minus = document.querySelector('.min')
-let numberCart = document.querySelector('.num')
-let cartInfo = document.querySelector('.cart-info')
-let total = document.querySelector('.total')

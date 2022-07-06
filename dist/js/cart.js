@@ -1,1 +1,0 @@
-let plus=document.querySelector(".plus"),minus=document.querySelector(".min"),numberCart=document.querySelector(".num"),cartInfo=document.querySelector(".cart-info"),total=document.querySelector(".total");
