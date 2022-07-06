@@ -1,10 +1,43 @@
+.landing-shop {
+  height: 60vh;
+  position: relative;
+  margin-bottom: 60px;
+  .skewed {
+    position: absolute;
+    top: -90px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $alt-black-color;
+    z-index: 0;
+    transform: skewY(-4deg);
+    transform-origin: top right;
+  }
+  h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: $red-color;
+    font-size: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
 .cont-card {
   display: grid;
-  grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 40px;
   justify-content: center;
   align-items: center;
-  padding-left: 50px;
+  padding-left: 30px;
+  @media ($max-sm) {
+    & {
+      grid-template-columns: none;
+    }
+  }
   .card {
     img {
       height: 200px;
@@ -16,7 +49,7 @@
       font-size: 20px;
       font-weight: bold;
       color: $black-color;
-      transition: .3s;
+      transition: 0.3s;
     }
     .btn-card {
       border: 2px solid $black-color;
