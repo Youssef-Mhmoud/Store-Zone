@@ -1,0 +1,44 @@
+doctype html
+html(lang="en")
+  head
+    include pug/layout/meta
+    title Store Zone
+    include pug/layout/styles
+  body 
+    //- Header
+    include pug/layout/header
+    section.cart-page
+      .container 
+        table.w-100
+          tr
+            th Product
+            th Quantity
+            th Total
+          tr 
+            td 
+              .cart-info.d-flex.flex-wrap 
+                img(src="img/19.jpg", alt="")
+                div 
+                  p Shoes 
+                  small Price: $50.00
+                  a(href="").btn.mt-5 Remove 
+            td 
+              button.quan <span class="min">-</span> <span class="num"> 1 </span><span class="plus">+</span>
+            td
+              small Price: $50.00
+          tr 
+            td 
+              .cart-info.d-flex.flex-wrap 
+                img(src="img/19.jpg", alt="")
+                div 
+                  p Shoes 
+                  small Price: $50.00
+                  a(href="").btn.mt-5 Remove 
+            td 
+              button.quan <span class="min">-</span> <span class="num"> 1 </span><span class="plus">+</span>
+            td
+              small Price: $50.00
+        .total
+          p Total : $50.00
+    include pug/layout/footer
+    include pug/layout/scripts

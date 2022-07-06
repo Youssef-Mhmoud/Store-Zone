@@ -1,0 +1,51 @@
+.cart-page {
+  padding: 200px;
+  th {
+    background-color: $black-color;
+    text-align: left;
+    padding: 5px;
+    color: white;
+    font-weight: normal;
+  }
+  td {
+    padding: 10px 5px;
+  }
+  .cart-info {
+    img {
+      width: 200px;
+      margin-right: 10px;
+    }
+    a {
+      display: block;
+      background-color: $black-color;
+      color: white;
+    }
+  }
+  .quan {
+    all: unset;
+    span {
+      color: $black-color;
+      font-size: 20px;
+      margin-left: 10px;
+      &.min,&.plus {
+        cursor: pointer;
+      }
+    &.num {
+      border-radius: 5px;
+      border: 1px solid;
+      display: inline-block;
+      padding: 1px 10px;
+      color: $black-color;
+    }
+    }
+  }
+  .total {
+    background-color: $black-color;
+    color: white;
+    width: fit-content;
+    margin: 100px auto 0px;
+    font-size: 30px;
+    border-radius: 4px;
+    padding: 10px 15px;
+  }
+}
